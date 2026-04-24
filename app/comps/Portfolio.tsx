@@ -19,18 +19,6 @@ let projects = [
         image : "/matcha.png"
     },
     {
-        alt: "Item1",
-        image: "/Creative1.png"
-    },
-    {
-        alt: "Item2",
-        image: "/Creative2.png"
-    },
-    {
-        alt: "Item3",
-        image: "/Creative3.png"
-    },
-    {
         alt: "Item5",
         image: "/Creative5.png"
     },
