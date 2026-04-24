@@ -11,27 +11,27 @@ type FAQItem = {
 const faqs: FAQItem[] = [
   {
     q: "How fast will I see results?",
-    a: "Most clients see measurable improvements within the first 14 days. Significant revenue scaling typically happens within 60–90 days as we optimize and iterate on winning campaigns.",
+    a: "You’ll usually start seeing early signals within the first couple of weeks — things like better CTRs, cheaper clicks, stronger creative performance. Meaningful revenue growth typically shows up within 60–90 days once we’ve tested, optimized, and doubled down on what’s working.",
   },
   {
     q: "Who is this for?",
-    a: "We work with established brands doing at least $10K/month in revenue who are ready to scale through paid advertising. Whether you're in e-commerce, SaaS, coaching, or local services — if you have a proven offer, we can scale it.",
+    a: "This is for brands already getting real traction — usually $10K+/month — that are ready to scale with paid ads. We work across e-commerce, SaaS, coaching, and local services, as long as you already have a proven offer that converts.",
   },
   {
     q: "What's required to get started?",
-    a: "Just a proven product or service and a minimum monthly ad budget of $5K. We handle everything else — strategy, creative, landing pages, tracking, and ongoing optimization.",
+    a: "Just two things: a product or service that’s already selling, and a minimum ad budget of around $5K/month so we have room to test and scale. We take care of everything else — strategy, creatives, landing pages, tracking, and optimization.",
   },
   {
     q: "Do you guarantee results?",
-    a: "Yes. We offer a 30-day performance guarantee. If we don't hit the agreed-upon KPIs within the first 30 days, we'll work for free until we do. We only win when you win.",
+    a: "We back our work with a 30-day performance guarantee. If we don’t hit the agreed KPIs in that window, we keep working at no extra cost until we do. We only succeed when your campaigns do.",
   },
   {
     q: "How is Kova different from other agencies?",
-    a: "Most agencies sell you a retainer and disappear. We operate as your fractional growth team — with full transparency, weekly strategy calls, real-time dashboards, and performance-based accountability.",
+    a: "Most agencies just run ads and send reports. We plug in like your actual growth team — full transparency, weekly strategy calls, live performance dashboards, and decisions driven by data, not guesswork.",
   },
   {
     q: "What platforms do you run ads on?",
-    a: "We specialize in Meta (Facebook & Instagram), Google Ads, TikTok, and YouTube. We'll recommend the right platform mix based on your audience, offer, and goals.",
+    a: "We focus on Meta (Facebook & Instagram), Google, TikTok, and YouTube. The platform mix depends on where your audience is and what offer you’re pushing — we don’t force one channel for everyone.",
   },
 ];
 
@@ -48,9 +48,6 @@ export default function FAQ() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-sm uppercase tracking-widest text-gray-500">
-            FAQ
-          </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3">
             Got{" "}

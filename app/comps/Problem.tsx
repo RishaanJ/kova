@@ -41,10 +41,6 @@ export default function Problem() {
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="text-center mb-16">
-          <span className="text-sm uppercase tracking-widest text-gray-500">
-            The Problem
-          </span>
-
           <h2 className="text-3xl md:text-4xl font-black mt-3">
             Your business is{" "}
             <Highlighter action="underline" color="#c49bca">

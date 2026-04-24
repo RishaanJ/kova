@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Highlighter } from "@/components/ui/highlighter";
+import { Check, TriangleAlert } from "lucide-react";
 
 export default function FinalCTA() {
   return (
@@ -38,23 +39,23 @@ export default function FinalCTA() {
         </a>
 
         <div className="mt-6 flex items-center gap-2 text-yellow-500 font-semibold text-sm">
-          <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse" />
-          Limited spots available — we only take on 5 new clients per month
+          <TriangleAlert className="w-4 h-4 text-yellow-500 animate-pulse" />
+          Limited spots available - we only take on 5 new clients per month
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-10 text-sm text-gray-500">
           <div className="flex items-center gap-2">
-            <span className="text-green-500 font-bold">✓</span>
+            <Check className="text-green-500 font-bold" />
             No long-term contracts
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-green-500 font-bold">✓</span>
+            <Check className="text-green-500 font-bold" />
             30-day performance guarantee
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-green-500 font-bold">✓</span>
+            <Check className="text-green-500 font-bold" />
             Free audit included
           </div>
         </div>

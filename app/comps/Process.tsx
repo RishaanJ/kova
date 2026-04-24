@@ -39,9 +39,6 @@ export default function Process() {
       <div className="max-w-5xl mx-auto px-4">
 
         <div className="text-center mb-16">
-          <span className="text-sm uppercase tracking-widest text-gray-500">
-            How It Works
-          </span>
 
           <h2 className="text-3xl md:text-4xl font-black mt-3">
             Your path to{" "}
