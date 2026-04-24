@@ -65,7 +65,7 @@ export default function Hero() {
           <div className="text-center">
             <NumberTicker value={6.8} decimalPlaces={1} className="block text-2xl font-extrabold text-gray-900 tracking-tight"/>
             <span className="text-xs text-gray-400 font-medium">
-              Avg. ROAS
+              Avg. Return on Ad Spend (ROAS)
             </span>
           </div>
 

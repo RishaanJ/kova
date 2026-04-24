@@ -1,6 +1,13 @@
 import { Highlighter } from "@/components/ui/highlighter";
+import {
+  DollarSign,
+  TrendingDown,
+  Brain,
+  Hourglass
+} from "lucide-react";
+
 type PainPoint = {
-  icon: string;
+  icon: React.ElementType;
   title: string;
   desc: string;
 };
@@ -8,22 +15,22 @@ type PainPoint = {
 export default function Problem() {
   const painPoints: PainPoint[] = [
     {
-      icon: "💸",
+      icon: DollarSign,
       title: "Wasting Ad Spend",
       desc: "Pouring money into campaigns with no clear tracking, attribution, or measurable ROI.",
     },
     {
-      icon: "📉",
+      icon: TrendingDown,
       title: "Inconsistent Revenue",
       desc: "Revenue swings wildly month to month with no predictable pipeline or forecasting.",
     },
     {
-      icon: "🤯",
+      icon: Brain,
       title: "Agency Runaround",
       desc: "Burned by agencies that over-promise, under-deliver, and lock you into long contracts.",
     },
     {
-      icon: "⏳",
+      icon: Hourglass,
       title: "No Time to Scale",
       desc: "You're stuck managing campaigns instead of growing your business and building your team.",
     },
@@ -33,7 +40,6 @@ export default function Problem() {
     <section id="problem" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
 
-        {/* Header */}
         <div className="text-center mb-16">
           <span className="text-sm uppercase tracking-widest text-gray-500">
             The Problem
@@ -51,34 +57,32 @@ export default function Problem() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {painPoints.map((point, i) => {
+            const Icon = point.icon;
 
-          {painPoints.map((point, i) => (
-            <div
-              key={i}
-              className="relative group overflow-hidden border border-gray-200 rounded-2xl p-6 hover:shadow-sm transition"
-            >
-              {/* top accent line */}
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-500 to-transparent opacity-0 group-hover:opacity-100 transition" />
+            return (
+              <div
+                key={i}
+                className="relative group overflow-hidden border border-gray-200 rounded-2xl p-6 hover:shadow-sm transition"
+              >
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-500 to-transparent opacity-0 group-hover:opacity-100 transition" />
 
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-2xl mb-4">
-                {point.icon}
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-gray-700" />
+                </div>
+
+                <h3 className="text-lg font-bold mb-2 text-gray-900">
+                  {point.title}
+                </h3>
+
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  {point.desc}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-lg font-bold mb-2 text-gray-900">
-                {point.title}
-              </h3>
-
-              {/* Desc */}
-              <p className="text-sm text-gray-500 leading-relaxed">
-                {point.desc}
-              </p>
-            </div>
-          ))}
-
+            );
+          })}
         </div>
       </div>
     </section>

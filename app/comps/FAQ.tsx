@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import { Highlighter } from "@/components/ui/highlighter";
 
 type FAQItem = {
   q: string;
@@ -25,7 +26,7 @@ const faqs: FAQItem[] = [
     a: "Yes. We offer a 30-day performance guarantee. If we don't hit the agreed-upon KPIs within the first 30 days, we'll work for free until we do. We only win when you win.",
   },
   {
-    q: "How is Apex different from other agencies?",
+    q: "How is Kova different from other agencies?",
     a: "Most agencies sell you a retainer and disappear. We operate as your fractional growth team — with full transparency, weekly strategy calls, real-time dashboards, and performance-based accountability.",
   },
   {
@@ -52,9 +53,10 @@ export default function FAQ() {
           </span>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-3">
-            Got <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-              questions?
-            </span>
+            Got{" "}
+            <Highlighter action="underline" color="#BC9AC1" >
+            questions?
+            </Highlighter>
           </h2>
 
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto">

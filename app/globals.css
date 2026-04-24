@@ -130,3 +130,10 @@ body {
 code, pre {
   font-family: var(--font-geist-mono), monospace;
 }
+
+.recharts-wrapper,
+.recharts-surface,
+.recharts-wrapper *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

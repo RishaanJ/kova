@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
 
           <p className="text-sm text-gray-500">
-            High-performance marketing systems for ambitious brands.
+            High-performance marketing systems for ambitious e-commerce brands.
           </p>
         </div>
 

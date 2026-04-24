@@ -1,12 +1,23 @@
+"use client";
+
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+} from "recharts";
+
 type CaseStudy = {
   client: string;
   industry: string;
-  before: string;
-  after: string;
-  metric: string;
-  roas: string;
   timeline: string;
   desc: string;
+  data: {
+    month: string;
+    before: number;
+    after: number;
+  }[];
 };
 
 export default function Results() {
@@ -14,130 +25,105 @@ export default function Results() {
     {
       client: "LuxeBeauty Co.",
       industry: "E-commerce / DTC",
-      before: "$28K/mo",
-      after: "$210K/mo",
-      metric: "Monthly Revenue",
-      roas: "7.2x ROAS",
       timeline: "90 days",
-      desc: "Scaled from a struggling Shopify store to a 7-figure run rate through Meta & Google Ads optimization.",
-    },
-    {
-      client: "FitPro Academy",
-      industry: "Online Education",
-      before: "12 leads/mo",
-      after: "340 leads/mo",
-      metric: "Qualified Leads",
-      roas: "$14 CPL",
-      timeline: "60 days",
-      desc: "Built a full-funnel lead generation system that 28x'd qualified applications for their coaching program.",
+      desc: "Scaled from inconsistent sales to predictable high revenue growth.",
+      data: [
+        { month: "M1", before: 28, after: 28 },
+        { month: "M2", before: 26, after: 60 },
+        { month: "M3", before: 30, after: 120 },
+        { month: "M4", before: 27, after: 210 },
+      ],
     },
     {
       client: "HomeServ Pro",
       industry: "Home Services",
-      before: "$8K/mo",
-      after: "$95K/mo",
-      metric: "Monthly Revenue",
-      roas: "11.4x ROAS",
       timeline: "120 days",
-      desc: "Dominated local search and scaled to multiple service areas with a data-driven Google Ads strategy.",
+      desc: "Built a consistent inbound system that scaled local demand.",
+      data: [
+        { month: "M1", before: 8, after: 8 },
+        { month: "M2", before: 9, after: 25 },
+        { month: "M3", before: 8.5, after: 60 },
+        { month: "M4", before: 8, after: 95 },
+      ],
     },
   ];
 
   return (
-    <section id="results" className="py-20 bg-gray-50">
+    <section className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-sm uppercase tracking-widest text-gray-500">
-            Case Studies
-          </span>
-
-          <h2 className="text-3xl md:text-4xl font-black mt-3">
-            Real results from{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-sky-400">
-              real clients
-            </span>
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-5xl font-black">
+            Revenue growth after working with us
           </h2>
 
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-            We don't just talk about results — we deliver them. Here's what our clients achieve.
+          <p className="text-gray-500 mt-4">
+            Values shown in monthly revenue ($K)
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {caseStudies.map((study, i) => (
             <div
               key={i}
-              className="flex flex-col gap-5 p-6 bg-white border border-gray-200 rounded-2xl shadow-sm"
+              className="bg-white rounded-2xl p-6"
             >
-
-              {/* Header */}
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">
-                    {study.client}
-                  </h3>
-                  <span className="text-xs text-gray-400 font-medium">
-                    {study.industry}
-                  </span>
-                </div>
-
-                <span className="text-xs font-semibold text-violet-500 bg-violet-50 border border-violet-100 px-3 py-1 rounded-full whitespace-nowrap">
-                  {study.timeline}
-                </span>
+              <div className="mb-4">
+                <h3 className="text-lg font-bold">{study.client}</h3>
+                <p className="text-xs text-gray-400">{study.industry}</p>
               </div>
 
-              {/* Metrics */}
-              <div className="flex items-center gap-4 p-4 bg-gray-50 border border-gray-200 rounded-xl">
+              <div className="h-64 outline-none focus:outline-none">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={study.data}>
 
-                {/* Before */}
-                <div className="flex-1 text-center">
-                  <span className="block text-[10px] uppercase tracking-widest text-gray-400 mb-1">
-                    Before
-                  </span>
-                  <span className="text-lg font-extrabold text-gray-400">
-                    {study.before}
-                  </span>
-                </div>
+                    {/* X axis (clean) */}
+                    <XAxis
+                      dataKey="month"
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fontSize: 12, fill: "#9CA3AF" }}
+                    />
 
-                {/* Arrow */}
-                <div className="text-violet-400 font-bold text-lg">
-                  →
-                </div>
+                    {/* Y axis (NOW FIXED but minimal) */}
+                    <YAxis
+                      axisLine={false}
+                      tickLine={false}
+                      tick={{ fontSize: 12, fill: "#D1D5DB" }}
+                      width={30}
+                    />
 
-                {/* After */}
-                <div className="flex-1 text-center">
-                  <span className="block text-[10px] uppercase tracking-widest text-gray-400 mb-1">
-                    After
-                  </span>
-                  <span className="text-lg font-extrabold text-emerald-500">
-                    {study.after}
-                  </span>
-                </div>
+                    {/* BEFORE */}
+                    <Line
+                      type="monotone"
+                      dataKey="before"
+                      stroke="#9CA3AF"
+                      strokeWidth={2}
+                      dot={false}
+                    />
+
+                    {/* AFTER */}
+                    <Line
+                      type="monotone"
+                      dataKey="after"
+                      stroke="#8B5CF6"
+                      strokeWidth={3}
+                      dot={false}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
               </div>
 
-              {/* Badges */}
-              <div className="flex flex-wrap gap-2">
-                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
-                  {study.roas}
-                </span>
-
-                <span className="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
-                  {study.metric}
-                </span>
-              </div>
-
-              {/* Description */}
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-gray-500 mt-4">
                 {study.desc}
               </p>
 
+              <span className="inline-block mt-3 text-xs px-3 py-1 rounded-full bg-violet-50 text-violet-600">
+                {study.timeline}
+              </span>
             </div>
           ))}
-
         </div>
       </div>
     </section>
