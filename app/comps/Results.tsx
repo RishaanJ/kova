@@ -23,7 +23,7 @@ type CaseStudy = {
 export default function Results() {
   const caseStudies: CaseStudy[] = [
     {
-      client: "LuxeBeauty Co.",
+      client: "RISE Nutrition",
       industry: "E-commerce / DTC",
       timeline: "90 days",
       desc: "Scaled from inconsistent sales to predictable high revenue growth.",
@@ -35,8 +35,8 @@ export default function Results() {
       ],
     },
     {
-      client: "HomeServ Pro",
-      industry: "Home Services",
+      client: "Ascend Buddy",
+      industry: "E-commerce / DTC",
       timeline: "120 days",
       desc: "Built a consistent inbound system that scaled local demand.",
       data: [
