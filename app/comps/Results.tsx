@@ -49,7 +49,7 @@ export default function Results() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-gray-50" id="results">
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="text-center mb-14">
