@@ -51,6 +51,7 @@ export default function Hero() {
         </div>
 
         {/* Trust Stats */}
+        {/*
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 px-8 py-5 bg-white border border-gray-200 rounded-2xl shadow-sm">
 
           <div className="text-center">
@@ -79,6 +80,7 @@ export default function Hero() {
           </div>
 
         </div>
+        */}
       </div>
 
         <DotPattern

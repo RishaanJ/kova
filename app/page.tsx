@@ -10,7 +10,7 @@ import OfferStack from "./comps/OfferStack";
 import FAQ from "./comps/FAQ";
 import FinalCTA from "./comps/FinalCTA";
 import Footer from "./comps/Footer";
-
+import Portfolio from "./comps/Portfolio";
 export default function Home() {
   return (
     <>
@@ -21,7 +21,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Process />
-        <Results />
+        <Portfolio />
         <OfferStack />
         <FAQ />
         <FinalCTA />
