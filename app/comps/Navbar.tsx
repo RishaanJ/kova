@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const navLinks: NavLink[] = [
     { label: "How It Works", href: "#process" },
-    { label: "Results", href: "#results" },
+    { label: "Portfolio", href: "#portfolio" },
     { label: "FAQ", href: "#faq" },
   ];
 
