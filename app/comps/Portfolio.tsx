@@ -31,7 +31,7 @@ export default function Portfolio(){
     const carouselItems = [...projects, ...projects, ...projects, ...projects];
 
     return (
-        <section className="py-24 relative overflow-hidden bg-background">
+        <section className="py-24 relative overflow-hidden bg-background" id="portfolio">
             <style>{`
                 @keyframes marquee {
                     0% { transform: translateX(0%); }

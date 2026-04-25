@@ -17,18 +17,18 @@ export default function Footer() {
           <p className="text-sm text-gray-500">
             High-performance marketing systems for ambitious e-commerce brands.
           </p>
+          <p className="text-sm mt-4 text-gray-300">
+            <a href="mailto:team@kova.now" className="text-gray-500 hover:text-gray-900 transition">team@kova.now</a> | <a href="tel:+1234567890" className="text-gray-500 hover:text-gray-900 transition">Phone Number</a>
+          </p>
         </div>
 
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-8 text-sm">
-          <a href="#results" className="text-gray-500 hover:text-gray-900 transition">
-            Results
+          <a href="#portfolio" className="text-gray-500 hover:text-gray-900 transition">
+            Portfolio
           </a>
           <a href="#process" className="text-gray-500 hover:text-gray-900 transition">
             Process
-          </a>
-          <a href="#testimonials" className="text-gray-500 hover:text-gray-900 transition">
-            Testimonials
           </a>
           <a href="#faq" className="text-gray-500 hover:text-gray-900 transition">
             FAQ

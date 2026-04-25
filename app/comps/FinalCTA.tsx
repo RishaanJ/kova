@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 
 import { Highlighter } from "@/components/ui/highlighter";
 import { Check, TriangleAlert } from "lucide-react";
@@ -72,6 +73,8 @@ export default function FinalCTA() {
           </div>
         </div>
         */}
+        <div className="calendly-inline-widget" data-url="https://calendly.com/team-kova/30min?primary_color=bc9ac1" style={{ minWidth:'75%', height: '800px' }}></div>
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
       </div>
     </section>
   );
