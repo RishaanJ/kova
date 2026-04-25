@@ -26,6 +26,10 @@ let projects = [
         alt: "Item6",
         image: "/Creative6.png"
     },
+    {
+        alt: "Item7",
+        image: "/canyon.png"
+    }
 ]
 export default function Portfolio(){
     const carouselItems = [...projects, ...projects, ...projects, ...projects];
