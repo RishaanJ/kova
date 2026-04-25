@@ -52,6 +52,7 @@ export default function Portfolio(){
                     <h2 className="text-3xl md:text-5xl font-black mt-4 leading-tight tracking-tight">
                         Our Work
                     </h2>
+                    <p className="text-sm text-gray-500">Spec Work/Concept Ads</p>
                 </div>
             </div>
 
