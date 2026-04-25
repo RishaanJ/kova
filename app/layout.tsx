@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -52,6 +54,10 @@ export default function RootLayout({
       <Analytics/>
       <body className={`${geistSans.className} min-h-full flex flex-col`}>
         {children}
+        <Script
+          src="https://embed.typeform.com/next/embed.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

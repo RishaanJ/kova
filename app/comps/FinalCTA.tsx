@@ -31,7 +31,7 @@ export default function FinalCTA() {
         </p>
 
         <a
-          href="#"
+          href="https://form.typeform.com/to/Qyhu3zEJ" target="_blank"
           className="mt-8 inline-flex items-center gap-3 px-10 py-4 text-lg font-semibold rounded-xl bg-black text-white hover:opacity-90 transition"
         >
           Book Your Free Strategy Call
