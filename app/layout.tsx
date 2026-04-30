@@ -51,6 +51,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <Script
+          id="apollo-tracker"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function initApollo(){
+                var n=Math.random().toString(36).substring(7),
+                o=document.createElement("script");
+                o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n;
+                o.async=true;
+                o.defer=true;
+                o.onload=function(){
+                  window.trackingFunctions.onLoad({appId:"69ec3729ecd3b0000d23951a"});
+                };
+                document.head.appendChild(o);
+              }
+              initApollo();
+            `,
+          }}
+        />
+      </head>
       <Analytics/>
       <body className={`${geistSans.className} min-h-full flex flex-col`}>
         {children}
