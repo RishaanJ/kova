@@ -104,7 +104,7 @@ function DashboardPanel({ className }: { className?: string }) {
         className
       )}
     >
-      <div className="absolute inset-0 rounded-2xl bg-green-400/10 blur-2xl scale-110 -z-10" />
+      <div className="absolute inset-0 rounded-2xl bg-[#BC9AC1]/20 blur-2xl scale-110 -z-10" />
       <div className="absolute inset-0 rounded-2xl bg-black/5 blur-xl scale-95 -z-10" />
 
       <div className="rounded-2xl border border-gray-200/80 bg-white/85 backdrop-blur-md shadow-2xl shadow-gray-300/50 overflow-hidden">
